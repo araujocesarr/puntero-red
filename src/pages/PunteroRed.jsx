@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/Navbar";
 import hat from "../images/hats-protocol@2x.png";
 import secret from "../images/secret-network@2x.png";
@@ -7,8 +7,70 @@ import check2 from "../images/check3.svg";
 import group from "../images/group-1000004148.svg";
 import group2 from "../images/group-1000004147.svg";
 import group3 from "../images/group-1000004146.svg";
+import youtube from "../images/screenshot-20220908-at-1246-1@2x.png";
+import uxbg from "../images/uxbg.svg";
+import sticker from "../images/sticker.svg";
+import plus from "../images/vector1.svg";
+import minus from "../images/vector.svg";
+import Footer from "../components/Footer";
 
 export default function PunteroRed() {
+  const [activeQuestion, setActiveQuestion] = useState(1);
+  const toggleAccordion = (id) => {
+    setActiveQuestion(id);
+  };
+
+  const faqData = [
+    {
+      id: 1,
+      question: "01. What is a Non-Limited Company (NLC)?",
+      answer: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Voluptatum ex odit in adipisci dolorem atque minus harum minimaalias delectus nobis voluptates cumque similique laboriosam, 
+      perspiciatis aliquam deleniti autem corrupti!`,
+    },
+    {
+      id: 2,
+      question: "01. What is a Non-Limited Company (NLC)?",
+      answer: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Voluptatum ex odit in adipisci dolorem atque minus harum minimaalias delectus nobis voluptates cumque similique laboriosam, 
+      perspiciatis aliquam deleniti autem corrupti!`,
+    },
+    {
+      id: 3,
+      question: "01. What is a Non-Limited Company (NLC)?",
+      answer: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Voluptatum ex odit in adipisci dolorem atque minus harum minimaalias delectus nobis voluptates cumque similique laboriosam, 
+      perspiciatis aliquam deleniti autem corrupti!`,
+    },
+    {
+      id: 4,
+      question: "01. What is a Non-Limited Company (NLC)?",
+      answer: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Voluptatum ex odit in adipisci dolorem atque minus harum minimaalias delectus nobis voluptates cumque similique laboriosam, 
+      perspiciatis aliquam deleniti autem corrupti!`,
+    },
+  ];
+
+  function AccordionItem({ question, answer, isActive, onClick }) {
+    return (
+      <div className="mb-8 border-b-[0.2px] border-midnight-blue-100">
+        <div className="flex justify-between" onClick={onClick}>
+          <h1 className="text-sm mb-2">{question}</h1>
+          <img src={isActive ? minus : plus} alt="" />
+        </div>
+        <p
+          className={`${
+            isActive
+              ? "h-auto  animate-flip-down animate-once animate-duration-[1000ms] animate-ease-in-out "
+              : "max-h-5"
+          } overflow-hidden text-sm mb-2`}
+        >
+          {answer}
+        </p>
+      </div>
+    );
+  }
+
   return (
     <>
       <section className="bg-hero-img min-h-[300px] bg-cover bg-center">
@@ -69,7 +131,7 @@ export default function PunteroRed() {
             <p className="font-semibold">LLC</p>
           </div>
           <div className="p-3 border-b border-gray-300  flex items-center justify-center">
-            <p className="font-semibold">Cost Efficiency</p>
+            <p className="font-semibold text-sm">Cost Efficiency</p>
           </div>
           <div className="p-3 border-l border-b border-r border-gray-300  flex items-center justify-center">
             <div className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1">
@@ -88,7 +150,7 @@ export default function PunteroRed() {
             </div>
           </div>
           <div className="p-3 border-b border-gray-300  flex items-center justify-center">
-            <p className="font-semibold">Geographic Scope</p>
+            <p className="font-semibold text-sm">Geographic Scope</p>
           </div>
           <div className="p-3 border-l border-b border-r border-gray-300  flex items-center justify-center">
             <div className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1">
@@ -107,7 +169,7 @@ export default function PunteroRed() {
             </div>
           </div>
           <div className="p-3 border-b border-gray-300  flex items-center justify-center">
-            <p className="font-semibold">Infrastructure</p>
+            <p className="font-semibold text-sm">Infrastructure</p>
           </div>
           <div className="p-3 border-l border-b border-r border-gray-300  flex items-center justify-center">
             <div className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1">
@@ -126,7 +188,7 @@ export default function PunteroRed() {
             </div>
           </div>
           <div className="p-3 border-b border-gray-300  flex items-center justify-center">
-            <p className="font-semibold">Decision Making</p>
+            <p className="font-semibold text-sm">Decision Making</p>
           </div>
           <div className="p-3 border-l border-b border-r border-gray-300  flex items-center justify-center">
             <div className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1">
@@ -145,7 +207,7 @@ export default function PunteroRed() {
             </div>
           </div>
           <div className="p-3 border-b border-gray-300  flex items-center justify-center">
-            <p className="font-semibold">Community Engagement</p>
+            <p className="font-semibold text-sm">Community Engagement</p>
           </div>
           <div className="p-3 border-l border-b border-r border-gray-300  flex items-center justify-center">
             <div className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1">
@@ -199,13 +261,78 @@ export default function PunteroRed() {
 
           <div className="flex items-center justify-center flex-col space-y-4">
             <h1 className="text-lg font-semibold">Unstoppable & Adaptive</h1>
-            <img src={group2} alt="" />
+            <img src={group3} alt="" />
             <p className="text-midnight-blue-100 text-center">
               Experience unmatched flexibility and strength with NLC tools.
             </p>
           </div>
         </div>
       </section>
+
+      <section className="py-16 bg-gray-background">
+        <p className="text-sm text-lightseagreen text-center mb-5">
+          Empower Your Entrepreneurship
+        </p>
+        <h1 className="mb-6 text-gray-200 font-bold text-center">
+          Why You Probably Don’t Need an LLC
+        </h1>
+        <div className="bg-midnight-blue-200 px-6 py-6 relative overflow-hidden">
+          <img src={uxbg} alt="" className="absolute left-40 z-20" />
+          <h1 className="text-white/30 mb-3">The Boomer Tip</h1>
+          <p className="text-white font-bold mb-5">
+            Hear Ron: <br />
+            Why NLCs Overpower <br />
+            Traditional LLCs
+          </p>
+          <div className="bg-gray-background pt-1 px-1.5 pb-1.5 rounded-md relative z-30">
+            <img
+              src={sticker}
+              alt="sticker"
+              className="absolute w-[20%] right-1 -top-8"
+            />
+            <img
+              src={youtube}
+              alt="youtube"
+              className="w-[20%] max-w-[200px]"
+            />
+            <iframe
+              className="w-full"
+              src="https://www.youtube.com/embed/XXYlFuWEuKI?si=ntAt7D53pukY_ryj"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-background px-6">
+        <p className="text-sm text-lightseagreen text-center mb-5">
+          Get your question answer
+        </p>
+        <h1 className="mb-6 text-gray-200 font-bold text-center">
+          Frequantly asked question
+        </h1>
+        <div>
+          {faqData.map((faq) => (
+            <AccordionItem
+              key={faq.id}
+              question={faq.question}
+              answer={faq.answer}
+              isActive={faq.id === activeQuestion}
+              onClick={() => toggleAccordion(faq.id)}
+            />
+          ))}
+        </div>
+        <div className="flex justify-center">
+          <button className="bg-aliceblue-100 text-slate-gray p-3 rounded-md">
+            Still Question? Contact us
+          </button>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 }

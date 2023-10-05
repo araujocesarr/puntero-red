@@ -17,11 +17,14 @@ module.exports = {
         "lategray-300": "#2c2f2e",
         lightseagreen: "#00a99d",
         "gray-200": "#0f2137",
+        "aliceblue-100": "#ecf2f6",
+        "slate-gray": "#738295",
+        "whitesmoke-100": "#f9fafc",
       },
       fontFamily: {
         arvo: ["arvo", "sans-serif"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated")],
 };
