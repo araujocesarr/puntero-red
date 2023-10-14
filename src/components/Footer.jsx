@@ -4,7 +4,7 @@ import logo from "../images/rectangle-608@2x.png";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-whitesmoke-100 py-16 px-6">
+      <footer className="bg-whitesmoke-100 py-16 px-6 xl:px-14">
         <div className="flex justify-between items-start flex-wrap gap-y-8">
           <div className="min-w-[140px]">
             <h1 className="text-gray-200 font-semibold mb-5">Company</h1>
@@ -66,7 +66,7 @@ export default function Footer() {
             <img
               src={logo}
               alt=""
-              className="filter brightness-110 mix-blend-multiply w-1/2"
+              className="filter brightness-110 mix-blend-multiply w-1/2 xl:w-1/3"
             />
             <p className="text-gray-200">Copyright by 2019 Redq, Inc</p>
           </div>

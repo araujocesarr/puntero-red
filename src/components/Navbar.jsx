@@ -47,7 +47,7 @@ export default function NavBar() {
             </a>
             <a
               href="#responsive-header"
-              className="block mt-4 lg:inline-block lg:mt-0 text-midnight-blue-100 hover:text-midnight-blue-200"
+              className="block mt-4 lg:inline-block lg:mt-0 text-midnight-blue-100 hover:text-midnight-blue-200 mr-4"
             >
               Supports
             </a>
