@@ -13,6 +13,7 @@ import sticker from "../images/sticker.svg";
 import plus from "../images/vector1.svg";
 import minus from "../images/vector.svg";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 export default function PunteroRed() {
   const [activeQuestion, setActiveQuestion] = useState(1);
@@ -319,7 +320,7 @@ export default function PunteroRed() {
 
           <div className="flex items-center justify-center flex-col space-y-6">
             <h1 className="text-lg font-semibold xl:text-xl">
-              The NLC Ecosystem{" "}
+              The NLC Ecosystem
             </h1>
             <img src={group2} alt="" />
             <p className="text-midnight-blue-100 text-center">
@@ -408,9 +409,11 @@ export default function PunteroRed() {
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="bg-aliceblue-100 text-slate-gray p-3 rounded-md">
-            Still Question? Contact us
-          </button>
+          <Link to="/join-us-form" target="_blank">
+            <button className="bg-aliceblue-100 text-slate-gray p-3 rounded-md">
+              Still Question? Contact us
+            </button>
+          </Link>
         </div>
       </section>
 
