@@ -72,6 +72,10 @@ export default function PunteroRed() {
     );
   }
 
+  function openWindow() {
+    window.open("/join-us-form", "popup");
+  }
+
   return (
     <>
       <section
@@ -409,7 +413,7 @@ export default function PunteroRed() {
           ))}
         </div>
         <div className="flex justify-center">
-          <Link to="/join-us-form" target="_blank">
+          <Link onClick={openWindow}>
             <button className="bg-aliceblue-100 text-slate-gray p-3 rounded-md">
               Still Question? Contact us
             </button>
