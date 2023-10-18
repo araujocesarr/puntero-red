@@ -139,7 +139,7 @@ export default function PunteroRed() {
           <div className="p-3 border-l border-r border-b border-gray-300 flex items-center justify-center">
             <p className="font-semibold xl:text-lg">NLC</p>
           </div>
-          <div className="p-3 border-r border-b border-gray-300  flex items-center justify-center">
+          <div className="p-3 border-b border-gray-300  flex items-center justify-center">
             <p className="font-semibold xl:text-lg">LLC</p>
           </div>
           <div className="p-3 border-b border-gray-300  flex items-center justify-center">
@@ -156,7 +156,7 @@ export default function PunteroRed() {
               </p> */}
             </div>
           </div>
-          <div className="p-3 border-b border-r border-gray-300  flex items-center justify-center">
+          <div className="p-3 border-b border-gray-300  flex items-center justify-center">
             <div
               className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1
             md:items-center md:justify-center"
@@ -187,7 +187,7 @@ export default function PunteroRed() {
               </p>
             </div>
           </div>
-          <div className="p-3 border-b border-r border-gray-300  flex items-center justify-center">
+          <div className="p-3 border-b  border-gray-300  flex items-center justify-center">
             <div
               className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1
             md:items-center md:justify-center"
@@ -218,7 +218,7 @@ export default function PunteroRed() {
               </p>
             </div>
           </div>
-          <div className="p-3 border-r border-b border-gray-300  flex items-center justify-center">
+          <div className="p-3  border-b border-gray-300  flex items-center justify-center">
             <div
               className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1
             md:items-center md:justify-center"
@@ -249,7 +249,7 @@ export default function PunteroRed() {
               </p>
             </div>
           </div>
-          <div className="p-3 border-r border-b border-gray-300  flex items-center justify-center">
+          <div className="p-3  border-b border-gray-300  flex items-center justify-center">
             <div
               className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1
             md:items-center md:justify-center"
@@ -282,7 +282,7 @@ export default function PunteroRed() {
               </p>
             </div>
           </div>
-          <div className="p-3 border-r border-b border-gray-300  flex items-center justify-center">
+          <div className="p-3  border-b border-gray-300  flex items-center justify-center">
             <div
               className="bg-graysmoke-200 rounded-full p-2 flex gap-x-1
             md:items-center md:justify-center"

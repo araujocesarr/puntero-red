@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import PunteroRed from "./pages/PunteroRed";
 import JoinUsForm from "./pages/JoinUsForm";
